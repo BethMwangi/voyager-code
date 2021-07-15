@@ -1,0 +1,12 @@
+{
+    "name": "crowdfavorite/starter",
+    "description": "Starter website",
+    "authors": [
+      {
+        "name": "Crowd Favorite",
+        "email": "support@crowdfavorite.com",
+        "homepage": "https://crowdfavorite.com/"
+      }
+    ],
+    "require": {}
+}

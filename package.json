@@ -1,0 +1,71 @@
+{
+  "name": "cf-starter",
+  "version": "0.0.1",
+  "description": "cf-starter npm config",
+  "main": "/assets/js/main.js",
+  "private": true,
+  "scripts": {
+    "build": "gulp",
+    "prod": "NODE_ENV=production gulp",
+    "dev": "gulp dev",
+    "watch": "gulp watch",
+    "optimize": "gulp optimizeImages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:crowdfavorite/template-repository.git"
+  },
+  "keywords": [
+    "cf-starter"
+  ],
+  "author": "CrowdFavorite",
+  "license": "GPLv2 or later",
+  "bugs": {
+    "url": "https://github.com/crowdfavorite/template-repository/issues"
+  },
+  "homepage": "https://github.com/crowdfavorite/template-repository#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@babel/runtime-corejs2": "^7.6.2",
+    "autoprefixer": "^6.7.7",
+    "babel-loader": "^8.0.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-promise": "^3.8.0",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tabify": "0.0.2",
+    "gulp-uglify": "^3.0.1",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^4.11.0",
+    "require-uncached": "^1.0.3",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^4.28.4",
+    "webpack-stream": "5.0.0",
+    "yargs": "^14.2.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true
+    }
+  }
+}

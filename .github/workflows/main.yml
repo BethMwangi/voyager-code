@@ -1,0 +1,26 @@
+# Make sure you read the readme for this integration
+# Available at https://github.com/crowdfavorite/gh-ml-integration/blob/primary/README.md
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  gh_ml_integration:
+    runs-on: ubuntu-latest
+    name: A job to manage mavenlink tickets
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: crowdfavorite/gh-ml-integration
+          token: ${{ secrets.GH_PAT }}
+      - name: Manage mavenlink tickets
+        uses: ./.github/actions/mavenlink/ # Uses an action in mavenlink directory
+        id: gh_ml_integration
+        with:
+          mavenlink_token: ${{ secrets.AUTH_TOKEN }} # MavenLink oAuth token
+          workspace_id: ${{ secrets.WORKSPACE_ID }} # MavenLink workspace ID
+      # Use the output from the `gh-ml-integration` step
+      - name: Get the output
+        run: echo "The output ${{ steps.gh_ml_integration.outputs.output }} "
