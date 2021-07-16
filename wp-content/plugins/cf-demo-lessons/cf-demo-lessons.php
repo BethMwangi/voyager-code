@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Plugin Name: CF Lesson Custom Post Types
+ * Plugin Name: CF Demo Lessons
  * Description: This plugin registers the lessons custom post types and taxonomies.
  * Plugin URI: http://voyager-code.test
  * Author: Beth Mwangi
  * Author URI: http://www.beth.com
  * Version: 1.0
  * License: GPL2
- * Text Domain: cf-demmo-lessons
+ * Text Domain: cf-demo-lessons
  *
- * @package cf-cpts
+ * @package cf-demo-lessons
  */
 
 if (!class_exists('LessonPlugin')) {
@@ -28,17 +28,17 @@ if (!class_exists('LessonPlugin')) {
         public function lessonRegisterPostType()
         {
             $labels = array(
-                'name' => __('Lessons', 'cf-demmo-lessons'),
-                'singular_name' => __('Lesson', 'cf-demmo-lessons'),
-                'menu_name' => _x('Lessons', 'cf-demmo-lessons'),
-                'add_new' => __('New Lesson', 'cf-demmo-lessons'),
-                'add_new_item' => __('Add New Lesson', 'cf-demmo-lessons'),
-                'edit_item' => __('Edit Lesson', 'cf-demmo-lessons'),
-                'new_item' => __('New Lesson', 'cf-demmo-lessons'),
-                'view_item' => __('View Lessons', 'cf-demmo-lessons'),
-                'search_items' => __('Search Lessons', 'cf-demmo-lessons'),
-                'not_found' => __('No Lessons Found', 'cf-demmo-lessons'),
-                'not_found_in_trash' => __('No Lessons found in Trash', 'cf-demmo-lessons'),
+                'name' => __('Lessons', 'cf-demo-lessons'),
+                'singular_name' => __('Lesson', 'cf-demo-lessons'),
+                'menu_name' => _x('Lessons', 'cf-demo-lessons'),
+                'add_new' => __('New Lesson', 'cf-demo-lessons'),
+                'add_new_item' => __('Add New Lesson', 'cf-demo-lessons'),
+                'edit_item' => __('Edit Lesson', 'cf-demo-lessons'),
+                'new_item' => __('New Lesson', 'cf-demo-lessons'),
+                'view_item' => __('View Lessons', 'cf-demo-lessons'),
+                'search_items' => __('Search Lessons', 'cf-demo-lessons'),
+                'not_found' => __('No Lessons Found', 'cf-demo-lessons'),
+                'not_found_in_trash' => __('No Lessons found in Trash', 'cf-demo-lessons'),
             );
             $args = array(
                 'labels' => $labels,
@@ -55,7 +55,7 @@ if (!class_exists('LessonPlugin')) {
                     'post-formats',
                     'page-attributes'
                 ),
-                'taxonomies' => array('post_tag'),
+                'taxonomies' => array('lesson_types'),
                 'rewrite' => array('slug' => 'lesson'),
                 'show_in_rest' => true
             );
@@ -66,22 +66,22 @@ if (!class_exists('LessonPlugin')) {
         public function lessonRegisterCustomTaxonomy()
         {
             $labels = array(
-                'name' => __('Categories', 'taxonomy name'),
-                'singular_name' => __('Category', 'taxonomy singular name'),
-                'search_items' => __('Search Categories'),
-                'all_items' => __('All Categories'),
-                'parent_item' => __('Parent Category'),
-                'parent_item_colon' => __('Parent Category:'),
-                'edit_item' => __('Edit Category'),
-                'update_item' => __('Update Category'),
-                'add_new_item' => __('Add New Category'),
-                'new_item_name' => __('New Category Name'),
-                'menu_name' => __('Categories'),
+                'name' => __('Lesson Types', 'cf-demo-lessons'),
+                'singular_name' => __('Lesson Type', 'cf-demo-lessons'),
+                'search_items' => __('Search Lesson Types'),
+                'all_items' => __('All Lesson Types'),
+                'parent_item' => __('Parent Lesson Type'),
+                'parent_item_colon' => __('Parent Lesson Type:'),
+                'edit_item' => __('Edit Lesson Type'),
+                'update_item' => __('Update Lesson Type'),
+                'add_new_item' => __('Add New Lesson Type'),
+                'new_item_name' => __('New Lesson Type Name'),
+                'menu_name' => __('Lesson Types'),
             );
 
             register_taxonomy(
-                'categories',
-                array('lessons'),
+                'lesson_types',
+                array('cpt_lessons'),
                 array(
                     'hierarchical' => true,
                     'labels' => $labels,
