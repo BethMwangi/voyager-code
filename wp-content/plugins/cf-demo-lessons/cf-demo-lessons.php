@@ -71,15 +71,15 @@ if (!class_exists('LessonPlugin')) {
 			$labels = array(
 				'name' => __('Lesson Types', 'cf-demo-lessons'),
 				'singular_name' => __('Lesson Type', 'cf-demo-lessons'),
-				'search_items' => __('Search Lesson Types'),
-				'all_items' => __('All Lesson Types'),
-				'parent_item' => __('Parent Lesson Type'),
-				'parent_item_colon' => __('Parent Lesson Type:'),
-				'edit_item' => __('Edit Lesson Type'),
-				'update_item' => __('Update Lesson Type'),
-				'add_new_item' => __('Add New Lesson Type'),
-				'new_item_name' => __('New Lesson Type Name'),
-				'menu_name' => __('Lesson Types'),
+				'search_items' => __('Search Lesson Types', 'cf-demo-lessons'),
+				'all_items' => __('All Lesson Types', 'cf-demo-lessons'),
+				'parent_item' => __('Parent Lesson Type', 'cf-demo-lessons'),
+				'parent_item_colon' => __('Parent Lesson Type:', 'cf-demo-lessons'),
+				'edit_item' => __('Edit Lesson Type', 'cf-demo-lessons'),
+				'update_item' => __('Update Lesson Type', 'cf-demo-lessons'),
+				'add_new_item' => __('Add New Lesson Type', 'cf-demo-lessons'),
+				'new_item_name' => __('New Lesson Type Name', 'cf-demo-lessons'),
+				'menu_name' => __('Lesson Types', 'cf-demo-lessons'),
 			);
 
 			register_taxonomy(
@@ -104,7 +104,7 @@ if (!class_exists('LessonPlugin')) {
 			$cmb = new_cmb2_box(
 				array(
 					'id' => 'lesson_metabox',
-					'title' => __('Lesson', 'cmb2'),
+					'title' => __('Lesson', 'cf-demo-lessons'),
 					'object_types' => array('cpt_lessons',),
 					'context' => 'normal',
 					'priority' => 'high',
@@ -114,8 +114,8 @@ if (!class_exists('LessonPlugin')) {
 
 			$cmb->add_field(
 				array(
-					'name' => esc_html__('Promoted', 'cmb2'),
-					'desc' => esc_html__('Promoted field', 'cmb2'),
+					'name' => esc_html__('Promoted', 'cf-demo-lessons'),
+					'desc' => esc_html__('Promoted field', 'cf-demo-lessons'),
 					'id' => 'promoted_checkbox',
 					'type' => 'checkbox',
 				)
@@ -123,8 +123,8 @@ if (!class_exists('LessonPlugin')) {
 
 			$cmb->add_field(
 				array(
-					'name' => __('Order', 'cmb2'),
-					'desc' => __('field Order Number', 'cmb2'),
+					'name' => __('Order', 'cf-demo-lessons'),
+					'desc' => __('field Order Number', 'cf-demo-lessons'),
 					'id' => 'lesson_order',
 					'type' => 'text',
 					'attributes' => array(
