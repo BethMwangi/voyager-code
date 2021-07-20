@@ -15,7 +15,10 @@
 
 namespace CrowdFavorite\DemoLessons;
 
-if (!class_exists('LessonPlugin')) {
+if (!class_exists('LessonPlugin')) {	
+	/**
+	 * LessonPlugin
+	 */
 	class LessonPlugin
 	{
 		/**
@@ -27,7 +30,12 @@ if (!class_exists('LessonPlugin')) {
 			add_action('init', array($this, 'lessonRegisterCustomTaxonomy'));
 			add_action('cmb2_admin_init', array($this, 'registerLessonMetabox'));
 		}
-
+		
+		/**
+		 * lessonRegisterPostType
+		 *
+		 * @return void
+		 */
 		public function lessonRegisterPostType()
 		{
 			$labels = array(
@@ -65,7 +73,12 @@ if (!class_exists('LessonPlugin')) {
 
 			register_post_type('cpt_lessons', $args);
 		}
-
+		
+		/**
+		 * lessonRegisterCustomTaxonomy
+		 *
+		 * @return void
+		 */
 		public function lessonRegisterCustomTaxonomy()
 		{
 			$labels = array(
@@ -95,7 +108,12 @@ if (!class_exists('LessonPlugin')) {
 				)
 			);
 		}
-
+		
+		/**
+		 * registerLessonMetabox
+		 *
+		 * @return void
+		 */
 		public function registerLessonMetabox()
 		{
 			/**
@@ -105,7 +123,7 @@ if (!class_exists('LessonPlugin')) {
 				array(
 					'id' => 'lesson_metabox',
 					'title' => __('Lesson', 'cf-demo-lessons'),
-					'object_types' => array('cpt_lessons',),
+					'object_types' => array('cpt_lessons'),
 					'context' => 'normal',
 					'priority' => 'high',
 					'show_names' => true,
