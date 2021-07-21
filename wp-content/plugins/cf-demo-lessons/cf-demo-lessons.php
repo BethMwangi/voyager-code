@@ -15,7 +15,7 @@
 
 namespace CrowdFavorite\DemoLessons;
 
-if (!class_exists('LessonPlugin')) {	
+if (!class_exists('LessonPlugin')) {
 	/**
 	 * LessonPlugin
 	 */
@@ -30,9 +30,9 @@ if (!class_exists('LessonPlugin')) {
 			add_action('init', array($this, 'lessonRegisterCustomTaxonomy'));
 			add_action('cmb2_admin_init', array($this, 'registerLessonMetabox'));
 		}
-		
+
 		/**
-		 * register CF lesson CPT 
+		 * Register CF lesson CPT
 		 *
 		 * @return void
 		 */
@@ -73,9 +73,9 @@ if (!class_exists('LessonPlugin')) {
 
 			register_post_type('cpt_lessons', $args);
 		}
-		
+
 		/**
-		 * register the CF lesson types taxonomy 
+		 * Register the CF lesson types taxonomy
 		 *
 		 * @return void
 		 */
@@ -108,7 +108,7 @@ if (!class_exists('LessonPlugin')) {
 				)
 			);
 		}
-		
+
 		/**
 		 * register the lesson metabox with promoted and order field
 		 *
