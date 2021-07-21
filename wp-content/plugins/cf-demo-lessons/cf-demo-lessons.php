@@ -32,7 +32,7 @@ if (!class_exists('LessonPlugin')) {
 		}
 		
 		/**
-		 * lessonRegisterPostType
+		 * register CF lesson CPT 
 		 *
 		 * @return void
 		 */
@@ -75,7 +75,7 @@ if (!class_exists('LessonPlugin')) {
 		}
 		
 		/**
-		 * lessonRegisterCustomTaxonomy
+		 * register the CF lesson types taxonomy 
 		 *
 		 * @return void
 		 */
@@ -110,7 +110,7 @@ if (!class_exists('LessonPlugin')) {
 		}
 		
 		/**
-		 * registerLessonMetabox
+		 * register the lesson metabox with promoted and order field
 		 *
 		 * @return void
 		 */
@@ -133,7 +133,7 @@ if (!class_exists('LessonPlugin')) {
 			$cmb->add_field(
 				array(
 					'name' => esc_html__('Promoted', 'cf-demo-lessons'),
-					'desc' => esc_html__('Promoted field', 'cf-demo-lessons'),
+					'desc' => esc_html__('', 'cf-demo-lessons'),
 					'id' => 'promoted_checkbox',
 					'type' => 'checkbox',
 				)
@@ -142,7 +142,7 @@ if (!class_exists('LessonPlugin')) {
 			$cmb->add_field(
 				array(
 					'name' => __('Order', 'cf-demo-lessons'),
-					'desc' => __('field Order Number', 'cf-demo-lessons'),
+					'desc' => __('This is used to order query results', 'cf-demo-lessons'),
 					'id' => 'lesson_order',
 					'type' => 'text',
 					'attributes' => array(
