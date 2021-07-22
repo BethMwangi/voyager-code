@@ -100,10 +100,12 @@ if (!class_exists('LessonPlugin')) {
 				array('cpt_lessons'),
 				array(
 					'hierarchical' => true,
+					'public' => true,
 					'labels' => $labels,
 					'show_ui' => true,
 					'show_admin_column' => true,
 					'query_var' => true,
+					'show_in_rest' => true,
 					'rewrite' => array('slug' => 'type'),
 				)
 			);
